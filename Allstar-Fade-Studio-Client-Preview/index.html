@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Allstar Fade Studio — sharp cuts and clean style in Victoria, Texas.">
+<title>Allstar Fade Studio | Victoria, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+:root{--bg:#070807;--panel:#101210;--line:rgba(255,255,255,.11);--text:#f4f5ef;--muted:#9da39b;--lime:#d9ff43;--max:1220px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");z-index:20}
+a{text-decoration:none;color:inherit}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.site-header{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:18px max(20px,calc((100vw - var(--max))/2));border-bottom:1px solid transparent;transition:.3s;background:rgba(7,8,7,.35);backdrop-filter:blur(12px)}
+.site-header.scrolled{border-color:var(--line);background:rgba(7,8,7,.88)}.brand{display:flex;align-items:center;gap:10px}.brand-mark{width:42px;height:42px;border:1px solid var(--lime);display:grid;place-items:center;font:800 17px 'Barlow Condensed';color:var(--lime);transform:skew(-8deg)}.brand strong{display:block;font:800 20px 'Barlow Condensed';letter-spacing:.08em}.brand small{display:block;font-size:8px;letter-spacing:.24em;color:var(--muted);margin-top:-2px}.nav{display:flex;gap:30px;font-size:12px;text-transform:uppercase;letter-spacing:.16em}.nav a{color:#c5c9c1;transition:.2s}.nav a:hover{color:var(--lime)}.header-cta{padding:12px 17px;background:var(--lime);color:#0a0d08;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.menu{display:none;background:none;border:0;color:white;font-size:24px}
+.hero{min-height:100vh;position:relative;display:grid;place-items:center;overflow:hidden;padding:130px 20px 70px;background:radial-gradient(circle at 74% 42%,rgba(217,255,67,.12),transparent 28%),linear-gradient(120deg,#070807 30%,#0c0f0c 100%)}
+.hero-grid{position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.hero:after{content:"";position:absolute;width:650px;height:650px;border:1px solid rgba(217,255,67,.16);border-radius:50%;right:-150px;top:18%;box-shadow:0 0 0 60px rgba(217,255,67,.025),0 0 0 120px rgba(217,255,67,.018);animation:spin 26s linear infinite}
+.hero-copy{position:relative;z-index:2;width:min(780px,100%);margin-right:auto;margin-left:max(0px,calc((100vw - var(--max))/2));}.kicker{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#aeb4aa;display:flex;gap:9px;align-items:center}.kicker span{width:25px;height:1px;background:var(--lime)}h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif}h1{font-size:clamp(70px,12vw,160px);line-height:.78;letter-spacing:-.025em;margin:25px 0 30px;font-weight:800}em{color:var(--lime);font-style:normal}.hero-description{max-width:480px;color:var(--muted);font-size:14px;line-height:1.8}.hero-actions{display:flex;gap:12px;margin:32px 0 42px}.button{display:inline-flex;align-items:center;gap:18px;padding:16px 21px;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:800;border:1px solid var(--line);transition:.25s}.button-solid{background:var(--lime);color:#090c08;border-color:var(--lime)}.button-solid:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(217,255,67,.16)}.button-ghost:hover{border-color:var(--lime);color:var(--lime)}.hero-meta{display:flex;gap:45px}.hero-meta div{display:flex;gap:10px;align-items:flex-start}.hero-meta b{font:700 10px 'Barlow Condensed';color:var(--lime)}.hero-meta span{font-size:9px;letter-spacing:.14em;line-height:1.35;color:#858c84}.hero-orb{position:absolute;right:12%;top:30%;z-index:1;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f1ff9c,rgba(217,255,67,.24) 12%,rgba(217,255,67,.05) 40%,transparent 70%);filter:blur(1px);animation:float 5s ease-in-out infinite}
+.section{padding:130px 0}.section-heading{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end;margin-bottom:55px}.section-heading h2{font-size:clamp(55px,8vw,105px);line-height:.82;margin-top:18px}.section-heading>p{color:var(--muted);font-size:13px;line-height:1.8;max-width:390px}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.service-card{min-height:330px;padding:27px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden;transition:.35s}.service-card:hover{background:#111510;transform:translateY(-5px)}.service-card:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:var(--lime);filter:blur(70px);opacity:0;transition:.35s;right:-80px;bottom:-80px}.service-card:hover:after{opacity:.12}.service-number{font:700 12px 'Barlow Condensed';color:var(--lime)}.service-icon{font-size:26px;margin:55px 0 16px}.service-card h3{font-size:31px;text-transform:uppercase}.service-card p{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.service-bottom{position:absolute;bottom:25px;left:27px;right:27px;display:flex;justify-content:space-between;color:#697067;font-size:9px;letter-spacing:.18em}.service-bottom strong{color:#b7bdb4}
+.about{background:#0b0e0b;border-block:1px solid var(--line)}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px;align-items:center}.about-mark{width:210px;height:210px;border:1px solid rgba(217,255,67,.35);border-radius:50%;display:grid;place-items:center;margin:auto;position:relative}.about-mark:before,.about-mark:after{content:"";position:absolute;inset:20px;border:1px dashed rgba(217,255,67,.22);border-radius:50%;animation:spin 15s linear infinite}.about-mark:after{inset:45px;animation-direction:reverse}.about-mark b{font:900 65px 'Barlow Condensed';color:var(--lime)}.about h2{font-size:clamp(55px,7vw,95px);line-height:.85}.about p{color:var(--muted);line-height:1.9;font-size:14px;max-width:650px;margin-top:24px}.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:45px}.promise{background:#0b0e0b;padding:25px}.promise b{display:block;font:700 27px 'Barlow Condensed';margin-bottom:8px}.promise span{font-size:10px;color:var(--muted);line-height:1.6}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}.visit-card{padding:45px}.visit-card+ .visit-card{border-left:1px solid var(--line)}.visit-card h3{font-size:45px;text-transform:uppercase;margin:14px 0 22px}.visit-card p,.hours{color:var(--muted);font-size:13px;line-height:2}.hours div{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07);padding:8px 0}.hours div span:last-child{color:#e4e8df}.map-box{height:100%;min-height:260px;background:radial-gradient(circle at 50% 50%,rgba(217,255,67,.12),transparent 25%),repeating-linear-gradient(0deg,transparent 0 34px,rgba(255,255,255,.05) 35px),repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.05) 35px);display:grid;place-items:center;position:relative}.map-pin{width:60px;height:60px;border:1px solid var(--lime);border-radius:50%;display:grid;place-items:center;color:var(--lime);font-size:22px;box-shadow:0 0 50px rgba(217,255,67,.12)}.map-label{position:absolute;bottom:22px;left:22px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#a8aea5}
+.cta{padding:120px 20px;text-align:center;border-top:1px solid var(--line);background:radial-gradient(circle at center,rgba(217,255,67,.09),transparent 35%)}.cta h2{font-size:clamp(65px,11vw,145px);line-height:.78}.cta p{color:var(--muted);margin:25px auto 30px;font-size:13px}.footer{padding:25px 0;border-top:1px solid var(--line);color:#70766e;font-size:9px;letter-spacing:.13em;text-transform:uppercase}.footer .wrap{display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-18px) scale(1.03)}}
+
+.gallery{padding-top:20px}.gallery-grid{display:grid;grid-template-columns:1.35fr .65fr .65fr;grid-template-rows:260px 260px;gap:10px}.gallery-item{position:relative;overflow:hidden;border:1px solid var(--line);background:#111}.gallery-item:first-child{grid-row:span 2}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.75) contrast(1.05);transition:transform .6s ease,filter .6s ease}.gallery-item:hover img{transform:scale(1.06);filter:saturate(1) contrast(1.08)}.gallery-item:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.78));pointer-events:none}.gallery-label{position:absolute;z-index:2;left:20px;bottom:18px;font:700 22px 'Barlow Condensed';text-transform:uppercase}.gallery-label span{display:block;font:9px Inter,sans-serif;letter-spacing:.18em;color:var(--lime);margin-bottom:4px}
+.booking{background:var(--lime);color:#090c08}.booking .kicker span{background:#090c08}.booking h2{font-size:clamp(60px,8vw,105px);line-height:.82}.booking p{max-width:570px;color:#30352d;line-height:1.7;margin:22px 0}.booking .button{border-color:#090c08;background:#090c08;color:var(--lime)}
+@media(max-width:850px){.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:260px 190px}.gallery-item:first-child{grid-row:span 1;grid-column:span 2}}
+@media(max-width:520px){.gallery-grid{display:block}.gallery-item{height:250px;margin-bottom:10px}}
+
+@media(max-width:850px){.nav{display:none}.menu{display:block}.header-cta{display:none}.hero-copy{margin:0}.hero-orb{right:-80px;top:42%;opacity:.65}.hero:after{right:-300px}.section{padding:90px 0}.section-heading,.about-grid,.visit-grid{grid-template-columns:1fr;gap:30px}.service-grid{grid-template-columns:1fr 1fr}.visit-card+.visit-card{border-left:0;border-top:1px solid var(--line)}.map-box{min-height:230px}.about-mark{width:170px;height:170px}.promise-grid{grid-template-columns:1fr}.footer .wrap{gap:20px;flex-direction:column}}
+@media(max-width:520px){.wrap{width:min(calc(100% - 28px),var(--max))}.site-header{padding:14px}.hero{padding-top:120px}.hero-meta{gap:18px}.hero-meta span{font-size:8px}.hero-actions{flex-direction:column;align-items:flex-start}.button{width:100%;justify-content:space-between}.service-grid{grid-template-columns:1fr}.service-card{min-height:280px}.service-icon{margin-top:35px}.visit-card{padding:28px}.section-heading h2{font-size:58px}.cta{padding:90px 14px}}
+</style>
+</head>
+<body>
+<header class="site-header" id="header">
+  <a class="brand" href="#"><span class="brand-mark">AF</span><span><strong>ALLSTAR</strong><small>FADE STUDIO</small></span></a>
+  <nav class="nav"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+  <a class="header-cta" href="tel:+13617035406">Call Now ↗</a>
+  <button class="menu" aria-label="Menu">☰</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-grid"></div><div class="hero-orb"></div>
+  <div class="hero-copy">
+    <p class="kicker"><span></span> Victoria, Texas</p>
+    <h1>YOUR<br><em>FRESH</em><br>STARTS HERE.</h1>
+    <p class="hero-description">Sharp fades. Clean lines. Personal style. Step into Allstar Fade Studio and leave looking like an allstar.</p>
+    <div class="hero-actions">
+      <a class="button button-solid" href="tel:+13617035406">Book Your Cut <span>↗</span></a>
+      <a class="button button-ghost" href="#services">Explore Services <span>↓</span></a>
+    </div>
+    <div class="hero-meta">
+      <div><b>01</b><span>PRECISION<br>FADES</span></div>
+      <div><b>02</b><span>BEARD<br>DETAILING</span></div>
+      <div><b>03</b><span>CLEAN<br>FINISH</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+<div class="wrap reveal"><div class="section-heading"><div><p class="kicker"><span></span> The lineup</p><h2>BUILT FOR<br><em>YOUR LOOK.</em></h2></div><p>Every cut gets the attention to detail it deserves. Pick the look you want, then call the studio to confirm the current service menu and availability.</p></div>
+<div class="service-grid">
+<article class="service-card"><span class="service-number">01</span><div class="service-icon">✦</div><h3>Signature Fade</h3><p>Precision blending and a finished style built around your look.</p><div class="service-bottom"><strong>PRECISION</strong><span>01</span></div></article>
+<article class="service-card"><span class="service-number">02</span><div class="service-icon">◒</div><h3>Classic Cut</h3><p>A clean, timeless cut with attention to shape and finish.</p><div class="service-bottom"><strong>CLEAN CUT</strong><span>02</span></div></article>
+<article class="service-card"><span class="service-number">03</span><div class="service-icon">✧</div><h3>Beard Detail</h3><p>Defined edges and a polished finish to complete the look.</p><div class="service-bottom"><strong>DETAIL</strong><span>03</span></div></article>
+<article class="service-card"><span class="service-number">04</span><div class="service-icon">⌁</div><h3>Full Service</h3><p>A complete grooming session designed to leave you feeling fresh.</p><div class="service-bottom"><strong>ALLSTAR</strong><span>04</span></div></article>
+</div></div>
+</section>
+
+
+<section class="section gallery" id="gallery">
+<div class="wrap reveal">
+  <div class="section-heading">
+    <div><p class="kicker"><span></span> Visual preview</p><h2>THE<br><em>LOOK.</em></h2></div>
+    <p>Professional placeholder imagery gives the site a finished feel now. Swap these images for the studio's own work when you get them.</p>
+  </div>
+  <div class="gallery-grid">
+    <article class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=85" alt="Barber giving a haircut"><div class="gallery-label"><span>01 / CUT</span>Precision in every detail</div></article>
+    <article class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1512690459411-b0fd4b7b1f2a?auto=format&fit=crop&w=900&q=85" alt="Barber tools and grooming"><div class="gallery-label"><span>02 / CRAFT</span>The details matter</div></article>
+    <article class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85" alt="Modern barbershop interior"><div class="gallery-label"><span>03 / STUDIO</span>Come through</div></article>
+    <article class="gallery-item"><img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85" alt="Barber styling hair"><div class="gallery-label"><span>04 / STYLE</span>Leave looking fresh</div></article>
+  </div>
+</div>
+</section>
+
+<section class="section about" id="about"><div class="wrap about-grid reveal">
+<div class="about-mark"><b>AF</b></div>
+<div><p class="kicker"><span></span> The Allstar standard</p><h2>LOOK GOOD.<br><em>FEEL DIFFERENT.</em></h2><p>Allstar Fade Studio is built around the details that make a cut feel right: a clean shape, a sharp finish, and a style that fits you. This preview is designed to give the studio a strong digital home that can be customized with its real service menu, photos, booking link, and brand details.</p>
+<div class="promise-grid"><div class="promise"><b>01</b><span>Clean presentation from the first click.</span></div><div class="promise"><b>02</b><span>Mobile-first layout for clients on the go.</span></div><div class="promise"><b>03</b><span>Fast call-to-action when it's time to book.</span></div></div></div>
+</div></section>
+
+<section class="section" id="visit"><div class="wrap reveal"><div class="section-heading"><div><p class="kicker"><span></span> Find the studio</p><h2>COME<br><em>THROUGH.</em></h2></div><p>Located at 1315 Sam Houston Dr in Victoria, Texas. Call before heading over to confirm availability.</p></div>
+<div class="visit-grid"><div class="visit-card"><p>ADDRESS</p><h3>1315 Sam Houston Dr<br>Victoria, TX 77901</h3><a class="button button-solid" href="tel:+13617035406">Call +1 (361) 703-5406 ↗</a></div>
+<div class="visit-card"><div class="hours"><div><span>Monday</span><span>Closed</span></div><div><span>Tuesday</span><span>10 AM – 8 PM</span></div><div><span>Wednesday</span><span>10 AM – 8 PM</span></div><div><span>Thursday</span><span>10 AM – 8 PM</span></div><div><span>Friday</span><span>10 AM – 8 PM</span></div><div><span>Saturday</span><span>9 AM – 6 PM</span></div><div><span>Sunday</span><span>Closed</span></div></div></div></div>
+</div></section>
+
+
+<section class="section booking"><div class="wrap reveal">
+<p class="kicker"><span></span> Your next look</p>
+<h2>MAKE IT<br><strong>ALLSTAR.</strong></h2>
+<p>Ready for a fresh cut? Call the studio to ask about today's availability and confirm the current service menu.</p>
+<a class="button" href="tel:+13617035406">Call +1 (361) 703-5406 ↗</a>
+</div></section>
+
+<section class="cta"><div class="reveal"><p class="kicker" style="justify-content:center"><span></span> Ready when you are <span></span></p><h2>READY TO GO<br><em>ALLSTAR?</em></h2><p>Call the studio and make your next cut the one that stands out.</p><a class="button button-solid" href="tel:+13617035406" style="display:inline-flex">Call To Book <span>↗</span></a></div></section>
+</main>
+<footer class="footer"><div class="wrap"><span>© Allstar Fade Studio</span><span>Victoria, Texas • Built as a website preview</span></div></footer>
+
+<script>
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelector('.menu').addEventListener('click',()=>{
+ const nav=document.querySelector('.nav');
+ const open=nav.style.display==='flex';
+ nav.style.cssText=open?'':'display:flex;position:absolute;top:70px;left:14px;right:14px;padding:20px;flex-direction:column;background:#0b0d0b;border:1px solid rgba(255,255,255,.12);gap:18px';
+});
+</script>
+</body>
+</html>
